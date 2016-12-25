@@ -1,0 +1,15 @@
+<div class="container">
+    <table class="table-striped">
+        <tr ng-repeat="item in list.found">
+            <td>
+                {{ item.name }},
+                {{ item.short_name }},
+                {{ item.description }}
+                <button class="btn btn-success" ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+            </td>
+        </tr>
+        <tr ng-if="list.isEmpty()">
+            <td>Nothing found</td>
+        </tr>
+    </table>
+</div>
